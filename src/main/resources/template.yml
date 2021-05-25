@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:mysql://<your DB address>:<your DB port>/AccuWeather?allowPublicKeyRetrieval=true&useSSL=false
+    username: <your username>
+    password: <your password>
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+      naming-strategy: org.Hibernate.cfg.ImprovedNamingStrategy
+    database: mysql
+
+server:
+  port: 8080
