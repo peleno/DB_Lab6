@@ -23,7 +23,7 @@ CREATE TABLE precipitation (
 CREATE TABLE weather_condition (
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     description varchar(50) NOT NULL,
-    icon blob NOT NULL,
+    icon blob,
     day bool NOT NULL,
     night bool NOT NULL
 );
@@ -192,16 +192,16 @@ INSERT INTO precipitation(rain, snow, ice) VALUES
 (3.0, 0.0, 0.0);
 
 INSERT INTO weather_condition(description, icon, day, night) VALUES
-('Sunny', LOAD_FILE('/home/andrii/Study/NULP/Course2/db/01-s.png'), 1, 0),
-('Partly Sunny', LOAD_FILE('/home/andrii/Study/NULP/Course2/db/01-s.png'), 1, 0),
-('Mostly Cloudy', LOAD_FILE('/home/andrii/Study/NULP/Course2/db/01-s.png'), 1, 0),
-('Cloudy', LOAD_FILE('/home/andrii/Study/NULP/Course2/db/01-s.png'), 1, 1),
-('Dreary', LOAD_FILE('/home/andrii/Study/NULP/Course2/db/01-s.png'), 1, 1),
-('Fog', LOAD_FILE('/home/andrii/Study/NULP/Course2/db/01-s.png'), 1, 1),
-('Showers', LOAD_FILE('/home/andrii/Study/NULP/Course2/db/01-s.png'), 1, 1),
-('Rain', LOAD_FILE('/home/andrii/Study/NULP/Course2/db/01-s.png'), 1, 1),
-('Snow', LOAD_FILE('/home/andrii/Study/NULP/Course2/db/01-s.png'), 1, 1),
-('Windy', LOAD_FILE('/home/andrii/Study/NULP/Course2/db/01-s.png'), 1, 1);
+('Sunny', NULL, 1, 0),
+('Partly Sunny', NULL, 1, 0),
+('Mostly Cloudy', NULL, 1, 0),
+('Cloudy', NULL, 1, 1),
+('Dreary', NULL, 1, 1),
+('Fog', NULL, 1, 1),
+('Showers', NULL, 1, 1),
+('Rain', NULL, 1, 1),
+('Snow', NULL, 1, 1),
+('Windy', NULL, 1, 1);
 
 INSERT INTO weather(temperature, real_feel_temperature, water_temperature, humidity, indoor_humidity, pressure, wind_speed,
 wind_direction, wind_gusts, dew_point, cloud_ceiling, precipitation_probability, precipitation_id, weather_condition_id,
