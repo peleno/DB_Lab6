@@ -1,5 +1,3 @@
-GRANT ALL ON *.* TO 'andrii'@'%';
-
 CREATE DATABASE IF NOT EXISTS AccuWeather;
 USE AccuWeather;
 
